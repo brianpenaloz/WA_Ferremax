@@ -1,0 +1,38 @@
+﻿@model List<WA_Ferremax.Models.Producto>
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <div><h1 class="display-4" style="background-color: red; color: white">Ferremax - Sistema de Venta</h1></div>
+
+    <h3>Pantalla Principal</h3>
+    <h3>Registro de Factura</h3>
+    <h3>Consulta</h3>
+
+
+    <br />
+
+    <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10">
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Idproducto</td>
+                <td>@item.Nombre</td>
+                <td>@item.Precio_unitario</td>
+            </tr>
+        }
+    </table>
+
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
